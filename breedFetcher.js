@@ -1,7 +1,7 @@
 const request = require('request');
 const breed = process.argv.slice(2);
 
-const breedFetcher = (searchBreed) => {
+const fetchBreedDescription = (searchBreed) => {
   request(`https://api.thecatapi.com/v1/breeds/search?q=${searchBreed}`, (error, response, body) => {
     if (error) {
       console.error("Error: ", error);
